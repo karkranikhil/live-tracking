@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <title>Live tracking</title>
     <style>
       html, body {
         height: 100%;
@@ -18,8 +20,10 @@
 
   <div id="map"></div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQC2kvOCZoGJGgpxj-c3VoUvG183pjdjQ&callback=initMap" async defer></script>
+	<script src="/js/jquery.min.js"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQC2kvOCZoGJGgpxj-c3VoUvG183pjdjQ&callback=initMap" async defer></script> -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhoabbTaqb651GanqDXnQW0wNOHZyyZhE&callback=initMap"
+  type="text/javascript"></script>
   <script src='/socket.io/socket.io.js'></script>
   <script src='/main.js'></script>
 </body>
