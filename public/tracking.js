@@ -1,7 +1,7 @@
 'use strict'
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 8,
+    zoom: 15,
     center: {lat: -37.82, lng: 144.941}
   });
 }
@@ -32,14 +32,13 @@ function createMap(lat,long){
   var geocoder = new google.maps.Geocoder;
   var infowindow = new google.maps.InfoWindow;
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 8,
+    zoom: 15,
     center: {lat: lat, lng: long}
   });
   var latlng = {lat: lat, lng: long};
   geocoder.geocode({'location': latlng}, function(results, status) {
     if (status === 'OK') {
       if (results[0]) {
-        map.setZoom(11);
         var marker = new google.maps.Marker({
           position: latlng,
           map: map
