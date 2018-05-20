@@ -44,10 +44,10 @@ function getAddressName(lat,long){
         infowindow.setContent(results[0].formatted_address);
         infowindow.open(map, marker);
       } else {
-        window.alert('No results found');
+        //window.alert('No results found');
       }
     } else {
-      window.alert('Geocoder failed due to: ' + status);
+      //window.alert('Geocoder failed due to: ' + status);
     }
   });
 }
