@@ -35,7 +35,10 @@ function createMap(lat,long){
     zoom: 15,
     center: {lat: lat, lng: long}
   });
-  var latlng = {lat: lat, lng: long};
+  var latlng = {
+    lat : parseFloat( lat ),
+    lng : parseFloat( long )
+  };
   geocoder.geocode({'location': latlng}, function(results, status) {
     if (status === 'OK') {
       if (results[0]) {
