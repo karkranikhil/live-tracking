@@ -1,0 +1,26 @@
+{
+  "name": "live-tracking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karkranikhil/live-tracking.git"
+  },
+  "keywords": [],
+  "author": "Nikhil karkra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/karkranikhil/live-tracking/issues"
+  },
+  "homepage": "https://github.com/karkranikhil/live-tracking/issues#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "socket.io": "^1.4.8"
+  }
+}
