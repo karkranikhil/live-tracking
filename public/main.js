@@ -27,7 +27,10 @@ socket.on('tick', busses => {
     marker.setMap(map)
     return marker
   })
-  getAddressName(latRxv,longRxv)
+  if(latRxv || longRxv){
+    getAddressName(latRxv,longRxv)
+  }
+  
 })
 
 function getAddressName(lat,long){
