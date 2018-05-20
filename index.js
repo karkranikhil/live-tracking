@@ -4,7 +4,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const socketIo = require('socket.io')
 const http = require('http')
-
+var port = process.env.PORT || 8080;
 const app = express()
 const server = http.createServer(app)
 const io = socketIo(server)
@@ -54,6 +54,6 @@ setInterval(() => {
   })
   io.emit('tick', busLocations)
   console.log(busLocations)
-}, 5000)
+}, 2000)
 
-server.listen(3008, () => console.log('server started'))
+server.listen(port, () => console.log('server started'))
