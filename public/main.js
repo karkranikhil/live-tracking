@@ -12,25 +12,28 @@ function initMap() {
 const socket = io('/')
 let busMarkers = []
 socket.on('tick', busses => {
+  var latRxv, longRxv
   console.log('main js on tick')
   busMarkers.forEach(busMarker => {
     busMarker.setMap(null)
   })
   console.log(busses);
   busMarkers = busses.map(bus => {
+    latRxv=bus.lat
+    longRxv=bus.long
     let marker = new google.maps.Marker({
       position: {lat: bus.lat, lng: bus.long}
     })
     marker.setMap(map)
-    getAddressName(bus.lat,bus.long)
     return marker
   })
+  getAddressName(latRxv,longRxv)
 })
 
 function getAddressName(lat,long){
   var geocoder = new google.maps.Geocoder;
   var infowindow = new google.maps.InfoWindow;
-  var latlng = {lat: lat, lng: long};
+  var latlng = {lat: parseFloat(lat), lng: parseFloat(long)};
   geocoder.geocode({'location': latlng}, function(results, status) {
     if (status === 'OK') {
       if (results[0]) {
